@@ -1,0 +1,9 @@
+Date,Service,UsageHours,Cost,Region
+2025-07-01,EC2,10,12.50,us-east-1
+2025-07-01,S3,100,2.30,us-east-1
+2025-07-01,Lambda,50,1.10,us-east-1
+2025-07-02,EC2,20,25.00,us-east-1
+2025-07-02,SageMaker,5,10.00,us-west-2
+2025-07-03,S3,200,4.60,us-east-1
+2025-07-03,Lambda,80,1.70,us-east-1
+2025-07-03,CloudWatch,30,3.40,us-east-1
