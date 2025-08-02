@@ -5,7 +5,14 @@ from app.cost_utils import (
     check_high_cost_alert
 )
 
-app = FastAPI()
+# Explicitly set docs and redoc URLs so they're not disabled in deployment
+app = FastAPI(
+    title="Cloud Cost Tracker API",
+    description="API for tracking and visualizing cloud costs",
+    version="1.0.0",
+    docs_url="/docs",
+    redoc_url="/redoc"
+)
 
 @app.get("/")
 def root():
@@ -13,7 +20,7 @@ def root():
 
 @app.get("/total-cost")
 def total_cost():
-    return {"total_cost": get_total_cost()}  # <-- FIXED: wrapped in a dict
+    return {"total_cost": get_total_cost()}  
 
 @app.get("/cost-by-service")
 def cost_by_service():
